@@ -49,6 +49,8 @@ public class Test {
 		no %= 2; //0
 		System.out.println(no);
 		
+		System.out.println("Git Hub 연동 테스트");
+		
 	}
 
 }
