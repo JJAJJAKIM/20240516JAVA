@@ -20,21 +20,37 @@ public class Test5 {
 //		System.out.println();
 //		}
 		
-		String[][] arr = new String[10][10];
+//		String[][] arr = new String[10][10];
+//		
+//		for(int i = 0; i<arr.length; i++){
+//			for(int j = 0; j<arr[i].length ; j++) {
+//				if(i>=j) {
+//					arr[i][j] = "O";
+//				} else {
+//					arr[i][j] = "X";
+//				}
+//				System.out.print(arr[i][j]+"\t");
+//			}
+//			System.out.println();
+//		}
 		
-		for(int i = 0; i<arr.length; i++){
-			for(int j = 0; j<arr[i].length ; j++) {
-				if(i>=j) {
-					arr[i][j] = "O";
+		String[][] arr = new String[9][17];
+		int k = 0 ; 
+		for(int i =0; i < arr.length; i++) {
+			for(int j=0; j<arr[i].length; j++) {
+				if(j%2==0) {
+					if((j-k)==(2*i)-k) {
+						arr[i][j] = "X";
+					} else {
+						arr[i][j] = "0";
+					}
 				} else {
-					arr[i][j] = "X";
+					arr[i][j] = " ";
 				}
-				System.out.print(arr[i][j]+"\t");
+				System.out.print(arr[i][j]);
 			}
+			k++;
 			System.out.println();
-		}
-		
-
+			}
 	}
-
 }
