@@ -18,8 +18,7 @@ public class Test3 {
 			System.out.println("값이 1이 아닙니다.");
 
 		
-		}
-		
+		}		
 	}
 	
 	
