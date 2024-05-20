@@ -17,10 +17,7 @@ public class Test3 {
 		default:
 			System.out.println("값이 1이 아닙니다.");
 
-		
+		// 연동 테스트
 		}		
 	}
-	
-	
-	
 }
