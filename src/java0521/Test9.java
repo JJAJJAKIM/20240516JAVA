@@ -36,6 +36,36 @@ public class Test9 {
 			}
 			System.out.println();
 		}
+		
+		System.out.println("==============================================");
+		
+		// 파스칼 삼각형 강사님 코드
+		
+		int[][] arr2 = new int[5][5];
+		int k = 1; // 초기값
+		arr2[0][0] = k;
+		
+		for(int i = 1; i < arr2.length; i++) {
+			
+			arr2[i][0] = k;
+			for(int j = 1; j< arr2[i].length; j++) {
+						
+				int b = (arr2[i-1][j-1] + arr2[i-1][j]);
+				arr2[i][j] = b;
+			}
+				
+		}
+
+		
+		for(int i = 0; i<arr2.length; i++) {
+			for(int j = 0; j<arr2[i].length; j++) {
+				System.out.print(arr2[i][j]+" ");
+			}
+			System.out.println();
+		}
+		
+		
+		
 	}
 
 }
