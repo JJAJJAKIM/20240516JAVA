@@ -19,9 +19,9 @@ public class Test7 {
 			for(int j=0; j < arr[i].length; j++) {
 				arr[i][j] = k;
 				k--;
-				System.out.println(arr[i][j]);
+				System.out.print(arr[i][j] + ",\t");
 			}
-			
+			System.out.println();
 		}
 		
 		
