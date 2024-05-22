@@ -26,12 +26,6 @@ public class Test3 {
     		
     		if(j < i) { 
     			arr[i][j] = " ";
-//    		} else if ( i == 2 && (j == 0 || j == 1)) {
-//    			arr[i][j] = " ";
-//    		} else if ( i == 3 && (j == 0 || j == 1 || j == 2)) {
-//    			arr[i][j] = " ";
-//    		} else if ( i == 4 && (j == 0 || j == 1 || j == 2 || j == 3)) {
-//    			arr[i][j] = " ";
     		} else {
     			arr[i][j] = sta;
     		}

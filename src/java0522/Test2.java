@@ -18,27 +18,22 @@ public class Test2 {
     String sta = "★";
 
     /*** 코드 시작 ***/
-    String[][] arr = new String[5][5];
     
+ 
+    String[][] arr = new String[5][5];
+  
     for(int i = 0; i < arr.length; i++) {
     	for(int j = 0; j < arr[i].length; j++) {
     		if(i >= j) {
     			arr[i][j] = sta;
-//    		} else if(i == 1 & j < arr[i].length-3) {
-//    			arr[i][j] = sta;
-//    		} else if(i == 2 & j < arr[i].length-2) {
-//    			arr[i][j] = sta;
-//    		} else if(i == 3 & j < arr[i].length-1) {
-//    			arr[i][j] = sta;
-//    		} else if(i == 4 & j < arr[i].length-0) {
-//    			arr[i][j] = sta;
     		} else {
     			arr[i][j] = " ";
     		}
     	}
     		
     }
-
+     
+    
     // 배열에 값 출력
     for(int i = 0; i < arr.length; i++) {
     	

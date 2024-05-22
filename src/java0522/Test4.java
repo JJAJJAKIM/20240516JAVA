@@ -16,11 +16,40 @@ public class Test4 {
 
 		// 해결 코드 작성 시작
 
-    String 별 = "★";
+    String sta = "★";
 
     /*** 코드 시작 ***/
+    String[][] arr = new String[5][5];
+    
+    for(int i = 0; i < arr.length; i++) {
+    	for(int j = 0; j < arr[i].length; j++) {
+    		if(j <(arr[i].length-1)-i) {
+    			arr[i][j] = " ";    
+//    		if( i == 0 && j <= 3 ) {
+//    			arr[i][j] = " ";    			
+//    		} else if(i == 1 && j <= 2) {
+//    			arr[i][j] = " ";
+//    		} else if(i == 2 && j <= 1) {
+//    			arr[i][j] = " "; 
+//    		} else if(i == 3 && j <= 0 ) {
+//    			arr[i][j] = " ";      		
+    		} else {
+    			arr[i][j] = sta; 
+    		}
+    		
+    	}
+    	
+    }
 
-
+    // 배열에 값 출력 
+    for(int i = 0; i < arr.length; i++) {
+    	
+    	for(int j = 0; j < arr[i].length; j++) {
+    		
+    		System.out.print(arr[i][j]);
+    	}   	
+    	System.out.println();
+    }
 
     /*** 코드 종료 ***/
 
