@@ -34,24 +34,37 @@ public class Test5 {
 //			System.out.println();
 //		}
 		
-		String[][] arr = new String[9][17];
+		int[][] arr = new int[9][17];
 		int k = 0 ; 
 		for(int i =0; i < arr.length; i++) {
-			for(int j=0; j<arr[i].length; j++) {
-				if(j%2==0) {
-					if(j==i+k) {
-						arr[i][j] = "X";
-					} else {
-						arr[i][j] = "0";
-					}
+			for(int j=0; (j+2)<arr[i].length; j+=2) {
+				if(j==i+k) {
+					arr[i][j] = 8;	
 				} else {
-					arr[i][j] = " ";
+					arr[i][j] = 5;
 				}
-				System.out.print(arr[i][j]);
+//				if(j%2==0) {
+//					if(j==i+k) {
+//						arr[i][j] = "X";
+//					} else {
+//						arr[i][j] = "0";
+//					}
+//				} else {
+//					arr[i][j] = " ";
+//				}
+//				System.out.print(arr[i][j]);
 			}
 			k++;
-			System.out.println();
+//			System.out.println();
+		}
+		
+		for(int i = 0; i<arr.length; i++) {
+			for(int j = 0; j<arr[i].length;j++) {
+				System.out.print(arr[i][j]+"\t");
 			}
+			System.out.println();
+		}
+		
 		System.out.println("-----------------------------------");
 		
 		String[][] arr2 = new String[9][17];

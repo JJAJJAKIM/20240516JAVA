@@ -46,14 +46,6 @@ public class Test1 {
     		// 빈공간
     		if(j < arr[i].length-i) {
     			arr[i][j] = str;   			    				
-//    		} else if (i == 1 &&( j < arr[i].length-1)) {
-//    			arr[i][j] = str;
-//    		} else if (i == 2 &&( j < arr[i].length-2)) {
-//    			arr[i][j] = str;
-//    		} else if (i == 3 &&( j < arr[i].length-3)) {
-//    			arr[i][j] = str;
-//    		} else if (i == 4 &&( j < arr[i].length-4)) {
-//    			arr[i][j] = str;
     		} else {
     			arr[i][j] = " ";
     		}

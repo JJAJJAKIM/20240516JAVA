@@ -23,7 +23,7 @@ public class Test8 {
 	    String star = "★";
 	
 	    /*** 코드 시작 ***/
-	    String[][] arr = new String[11][7];
+	    String[][] arr = new String[15][11];
 	    int k = (arr.length/2)+1; // 배열 행의 중간값 추출
 	    //System.out.println(arr.length/2);
 	    
