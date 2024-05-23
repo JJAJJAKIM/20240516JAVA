@@ -23,20 +23,21 @@ public class Test5 {
 			System.out.println("첫번쨰 숫자를 입력하세요.");
 			int a = sc.nextInt();
 			
+
 			System.out.println("연산자를 입력하세요. ex) +, -, /, *" );
-			String b = sc.next();
+			String b = sc.nextLine();
 			
 			System.out.println("두번째 숫자를 입력하세요.");
 			int c = sc.nextInt();
 			
 			switch(b) {
 			case "+" :
-				res = a + c;
+				res = a+c;
 //				key = false;
 				System.out.println("결과값은 : " +res );	
 				break;
 			case "-" :
-				res = a - c;
+				res = a-c;
 //				key = false;
 				System.out.println("결과값은 : " +res );	
 				break;
@@ -58,9 +59,7 @@ public class Test5 {
 //			System.out.println("결과값은 : " +res );			
 			
 		}
-		
-		
-		
+
 		/** 객체 제거 **/
 		sc.close();
 		
