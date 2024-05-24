@@ -5,7 +5,7 @@ public class Test4 {
 	static int a = 0;
 	static int c = 0;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) { // 지역변수명과 전역변수명이 같을때는 지역변수가 우선이다.
 			
 		System.out.println(a);
 		int c = b();
