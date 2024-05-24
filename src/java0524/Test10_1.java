@@ -9,11 +9,11 @@ public class Test10_1 {
 	
 	private void star(int a){
 		
+		/*** 코드 시작 ***/
 		String star = "★";
 		String[][] arr = new String[a][a-4];
 		
 		 int k = (arr.length/2)+1;
-		    /*** 코드 시작 ***/
 		    for(int i = 0; i < arr.length; i++) {
 		    	for(int j = 0; j< arr[i].length; j++) {
 		    		if(i<k && j <= i) {
