@@ -26,8 +26,8 @@ public class DataController {
 							+ "position varchar(50)"
 							+ ")";
 	
-	String insertQ = "INSERT INTO userlist values (?,?,?,?,?,?)"; // ?를 사용하여 처리할수 있다.
-	String selectQ = "SELECT * FROM userlist";
+	String insertQ = "INSERT INTO userlist values (?,?,?,?,?,?)"; // PrepareStatement를 사용하면 
+	String selectQ = "SELECT * FROM userlist";					  // 파라미터 부분에 ?를 사용하여 처리할수 있다.
 	String updateQ = "UPDATE userlist SET position = ? WHERE no = ?";
 	String deleteQ = "DELETE FROM userlist where no = ?";
 	
@@ -42,7 +42,7 @@ public class DataController {
 
 	private void 시작() {
 		try {
-			Class.forName(드라이버);
+			Class.forName(드라이버); // 존재 여부만 확인. JDK 6 이후 부터는 굳이 로드하지 않아도 된다.
 			Connection conn = DriverManager.getConnection(주소,사용자,비밀번호);
 			control(conn); // 기능제어 부분
 			conn.close();
@@ -78,10 +78,10 @@ public class DataController {
 			select(selectQ, conn); // 데이터 수정 후 확인
 			
 			// 4단계 데이터 삭제 (delete)
-//			data = new DataDTO();
-//			data.setNo(1);
-//			cud(deleteQ, conn, data, "D");
-//			select(selectQ, conn);// 데이터 삭제 후 확인
+			data = new DataDTO();
+			data.setNo(1);
+			cud(deleteQ, conn, data, "D");
+			select(selectQ, conn);// 데이터 삭제 후 확인
 			
 		} else {
 			System.out.println("테이블 생성 실패");
@@ -89,7 +89,7 @@ public class DataController {
 	}
 	
 	private List datainput() {
-		List list = new ArrayList();
+		List<DataDTO> list = new ArrayList<DataDTO>();
 		DataDTO data = new DataDTO();
 		data.setNo(1);
 		data.setName("몽키 D 루피");
@@ -201,7 +201,7 @@ public class DataController {
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery(); // SELECT문 사용시 executeQuery를 통해 결과값을 리턴받을수 있다.
-				
+			System.out.println(rs);
 			while(rs.next()) {
 				DataDTO data = new DataDTO();
 				data.setNo(rs.getInt("no"));
