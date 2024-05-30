@@ -50,7 +50,8 @@ public class DBConnection {
 				data.setNo(rs.getInt("no"));
 				data.setEmail(rs.getString("email"));
 				data.setPassword(rs.getString("password"));
-				data.setDelYn(rs.getBoolean("delYn"));
+				data.setDelYn(rs.getBoolean("delYn")? "Y" : "N"); 
+
 
 				//System.out.println(data);
 
@@ -71,7 +72,7 @@ public class DBConnection {
 			pstmt.setInt(1, data.getNo());
 			pstmt.setString(2, data.getEmail());
 			pstmt.setString(3, data.getPassword());
-			pstmt.setBoolean(4, data.isDelYn());
+			pstmt.setBoolean(4, "Y".equals(data.getDelYn()) ? true : false );
 
 			int state = pstmt.executeUpdate();
 			pstmt.close();
@@ -107,7 +108,7 @@ public class DBConnection {
 		try {
 			pstmt = conn.prepareStatement(sql);
 
-			pstmt.setBoolean(1, data.isDelYn());
+			pstmt.setBoolean(1, "Y".equals(data.getDelYn())? true:false);
 			pstmt.setInt(2, data.getNo());
 
 			int state = pstmt.executeUpdate();

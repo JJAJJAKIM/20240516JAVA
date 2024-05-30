@@ -6,7 +6,9 @@ public class DbTable {
 	private int no;
 	private String email;
 	private String password;
-	private boolean delYn;
+//	private boolean delYn;
+	private String delYn;
+	
 	public int getNo() {
 		return no;
 	}
@@ -25,10 +27,16 @@ public class DbTable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public boolean isDelYn() {
+//	public boolean isDelYn() {
+//		return delYn;
+//	}
+//	public void setDelYn(boolean delYn) {
+//		this.delYn = delYn;
+//	}
+	public String getDelYn() {
 		return delYn;
 	}
-	public void setDelYn(boolean delYn) {
+	public void setDelYn(String delYn) {
 		this.delYn = delYn;
 	}
 	@Override

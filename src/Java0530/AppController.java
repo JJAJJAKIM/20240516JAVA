@@ -57,28 +57,28 @@ public class AppController {
 		data.setNo(1);
 		data.setEmail("홍길동@이메일.컴");
 		data.setPassword("pAssWorD");
-		data.setDelYn(false);
+		data.setDelYn("N");
 		list.add(data);
 		
 		data = new DbTable();
 		data.setNo(2);
 		data.setEmail("유관순@이메일.컴");
 		data.setPassword("1@34%");
-		data.setDelYn(true);
+		data.setDelYn("Y");
 		list.add(data);
 		
 		data = new DbTable();
 		data.setNo(3);
 		data.setEmail("이순신@이메일.컴");
 		data.setPassword("!!9!2#");
-		data.setDelYn(true);
+		data.setDelYn("Y");
 		list.add(data);
 		
 		data = new DbTable();
 		data.setNo(4);
 		data.setEmail("화이슬@이메일.컴");
 		data.setPassword("ghkdltmf");
-		data.setDelYn(false);
+		data.setDelYn("N");
 		list.add(data);
 		
 		return list;
@@ -96,7 +96,6 @@ public class AppController {
 		String checkInt = "";
 		String checkBoolean = "";
 		int convInt = 0;
-		boolean convBoolean = false ;
 		while(key1) {
 			System.out.println("번호 값은?(숫자만 입력하세요)");
 			 checkInt = scan.nextLine(); 
@@ -123,17 +122,20 @@ public class AppController {
 			System.out.println("삭제여부?");
 			checkBoolean = scan.nextLine();
 			if(!"".equals(checkBoolean)) {
-				if("true".equals(checkBoolean) || "false".equals(checkBoolean)) {
-					convBoolean = Boolean.valueOf(checkBoolean);
+				if("y".equals(checkBoolean) || "Y".equals(checkBoolean)) {
+					checkBoolean = "y";
 					key1 = false;
-				} else {
-					System.out.println("true 또는 false로 입력하세요. 대소문자 구별하세요.");
+				} else if("n".equals(checkBoolean) || "N".equals(checkBoolean)) {
+					checkBoolean = "n";
+					key1 = false;
+				} else {	
+					System.out.println("y 또는 n으로 입력하세요.");
 				}
 			} else {
 				System.out.println("값이 비었습니다. 값을 입력하세요.");
 			}
 		}
-		data.setDelYn(convBoolean);
+		data.setDelYn(checkBoolean);
 
 		
 		
@@ -210,7 +212,6 @@ public class AppController {
 		 *****************************************/
 		boolean key1 = true;
 		String checkBoolean = "";
-		boolean convBoolean = false;
 		String checkInt = "";
 		int convInt = 0;
 
@@ -236,8 +237,11 @@ public class AppController {
 		while(key1) {
 			checkBoolean = scan.nextLine();
 			if(!"".equals(checkBoolean)) {
-				if("true".equals(checkBoolean) || "false".equals(checkBoolean)) {
-					convBoolean = Boolean.valueOf(checkBoolean);
+				if("y".equals(checkBoolean) || "Y".equals(checkBoolean)) {
+					checkBoolean = "y";
+					key1 = false;
+				} else if("n".equals(checkBoolean) || "N".equals(checkBoolean)) {
+					checkBoolean = "n";
 					key1 = false;
 				} else {
 					System.out.println("true 또는 false로 입력하세요. 대소문자 구별하세요.");
@@ -246,7 +250,7 @@ public class AppController {
 				System.out.println("값이 비었습니다. 값을 입력하세요.");
 			}
 		}
-		data.setDelYn(convBoolean);
+		data.setDelYn(checkBoolean);
 		
 		System.out.println(data);
 		// 코드추가를 확인 후 아래의 주석을 풀고 실행하세요.
