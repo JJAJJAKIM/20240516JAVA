@@ -80,7 +80,7 @@ public class AppController {
 		data.setEmail("cheawon@email.com");
 		data.setDeptname("르세라핌");
 		data.setPosition("가수");
-		data.setPhone("101034567891");
+		data.setPhone("01034567891");
 		data.setAge(25);
 		data.setIsused(true);
 		data.setCreatedate("2022-05-02");
@@ -131,6 +131,7 @@ public class AppController {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String day = dateFormat.format(toDay);
 		
+		
 		data.setEmpno("2405006");
 		data.setName("마동석");
 		data.setEmail("onepunch@email.com");
@@ -151,7 +152,7 @@ public class AppController {
 	private void 가져오기(Connection conn) {
 //		sql = "select * from userinfo"; // DML 추가
 		sql = "select empno, name, email, deptname, position, phone, age, ";
-		sql += " case when isused = 1 then '제직중' else '퇴사' END AS isused2, ";
+		sql += " case when isused = 1 then '재직' else '퇴사' END AS isused2, ";
 		sql += " DATE_FORMAT(createdate, '%Y-%m-%d') AS createdate, ";
 		sql += " DATE_FORMAT(updatedate, '%Y-%m-%d') AS updatedate ";
 		sql += " from userinfo ";

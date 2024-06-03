@@ -12,7 +12,6 @@ public class Test01 {
 		
 		new DataController(드라이버, 주소, 사용자, 비밀번호);
 		
-
 	}
 
 }

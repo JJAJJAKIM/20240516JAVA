@@ -201,7 +201,7 @@ public class DataController {
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery(); // SELECT문 사용시 executeQuery를 통해 결과값을 리턴받을수 있다.
-			System.out.println(rs);
+//			System.out.println(rs);
 			while(rs.next()) {
 				DataDTO data = new DataDTO();
 				data.setNo(rs.getInt("no"));

@@ -72,7 +72,6 @@ public class AppController {
 		data.setPosition(scan.nextLine());
 		System.out.println("입력 끝 ");
 
-		
 		System.out.println(data);
 		// 코드추가를 확인 후 아래의 주석을 풀고 실행하세요.
 		db.데이터입력하기(conn, sql, data);
